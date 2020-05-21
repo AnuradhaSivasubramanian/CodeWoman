@@ -1,0 +1,17 @@
+body {
+  font-family: "Roboto" !important;
+}
+.avatars--container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.avatars_h1 {
+  font-size: 1.3rem;
+}
+.avatars_img {
+  width: 30%;
+  border-radius: 50%;
+  border: solid #ec5c56 4px;
+}

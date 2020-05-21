@@ -1,10 +1,6 @@
-/* body {
-  margin: 0;
-  font-family: "Roboto";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-} */
-
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Roboto", monospace;
-} */
+body,
+html {
+  font-family: $font !important;
+  color: $lilac;
+  background-color: black;
+}

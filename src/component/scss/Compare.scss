@@ -1,10 +1,6 @@
-.Avatars h1 {
-  color: #1c447b;
-}
-.Avatars img {
-  height: 330px;
-  border-radius: 5px;
-  border: 5px solid #816452;
+/*
+.Avatars {
+  display: flex;
 }
 
 .displayBlock {
@@ -74,19 +70,9 @@ li {
   color: #1c447b;
 }
 
-.hero_container {
-  background-color: #dddddd;
-
-  display: flex;
-  flex-wrap: wrap;
-  width: 70%;
-  margin-left: 15%;
-  height: 80%;
-  justify-content: space-evenly;
-  margin-bottom: 100px;
-}
-.container_avatar img {
-  width: 150px;
+img {
+  width: 100px;
+  height: 100px;
 }
 .our_hero {
   width: 150px;
@@ -102,4 +88,49 @@ li {
   text-align: center;
   color: #1c447b;
   font-size: 20pt;
+}
+*/
+
+/* COLORS */
+$red: #ec5c56;
+$blue: #1c447b;
+$grey: #dddddd;
+$brown: #816452;
+
+/* FONT FAMILY */
+$font: "Roboto";
+
+/* FONT WEIGHTS */
+$light: 300;
+$medium: 500;
+
+/* FONT SIZE */
+$h1: 8vw;
+$h2: 5vw;
+$bodytext: 1.3rem;
+$marginal: 14px;
+
+/* BORDER */
+$border-thick: 4px;
+$border-thin: 1px;
+
+body {
+  font-family: $font !important;
+}
+
+.avatars--container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatars_h1 {
+  font-size: 1.3rem;
+}
+
+.avatars_img {
+  width: 30%;
+  border-radius: 50%;
+  border: solid $red $border-thick;
 }

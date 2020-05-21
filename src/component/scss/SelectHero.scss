@@ -1,0 +1,135 @@
+/* COLORS */
+$red: #ec5c56;
+$lilac: #570071;
+$light-lilac: #8622b6;
+$black: #060527;
+
+/* FONT FAMILY */
+$font: "Roboto";
+
+/* FONT WEIGHTS */
+$light: 300;
+$medium: 500;
+
+/* FONT SIZE */
+$h1: 5rem;
+$h2: 2rem;
+$p: 1.3rem;
+$span: 1rem;
+$bodytext: 1.3rem;
+$marginal: 14px;
+
+/* BORDER */
+$border-thick: 3px;
+$border-thin: 1px;
+
+.choose--img {
+  background-image: url(../images/Choose.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 35vh;
+  position: relative;
+  top: 5%;
+}
+
+.question--allies {
+  height: 100px;
+  border-radius: 50%;
+}
+
+.allies--wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: auto;
+
+  animation: slide 0.5s forwards;
+}
+
+.allies--wrapper img {
+  display: flex;
+  height: 90px;
+  width: 90px;
+  margin: 2%;
+  border: $red 3px solid;
+  border: solid $border-thick $light-lilac;
+  border-radius: 20%;
+  &:hover {
+    animation: pulse-red 2s infinite;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .allies--wrapper img {
+    height: 75px;
+    width: 75px;
+  }
+}
+
+.slidehero {
+  position: absolute;
+  bottom: -70%;
+  width: 100%;
+  height: 15%;
+  background: $light-lilac;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slidehero 0.5s forwards;
+  animation-delay: 1s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slidehero {
+  0% {
+    bottom: -70%;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+/* SLIDE IN*/
+.wrapper_select {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 50vh;
+}
+
+.slide_select {
+  position: absolute;
+  left: -100%;
+  width: 100%;
+  height: 60%;
+  bottom: 35%;
+  padding-left: 5%;
+  padding: 5%;
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
+  opacity: 1;
+  background: $lilac !important;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+  animation-delay: 0.9s;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .slide_select {
+    top: 5%;
+  }
+}
+
+@-webkit-keyframes slide {
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slide {
+  100% {
+    left: 0;
+  }
+}
