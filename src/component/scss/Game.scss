@@ -1,0 +1,48 @@
+/* COLORS */
+$red: #ec5c56;
+$lilac: #570071;
+$light-lilac: #8622b6;
+$black: #060527;
+
+/* FONT FAMILY */
+$font: "Roboto";
+
+/* FONT WEIGHTS */
+$light: 300;
+$medium: 500;
+
+/* FONT SIZE */
+$h1: 5rem;
+$h2: 2rem;
+$p: 1.3rem;
+$span: 1rem;
+$bodytext: 1.3rem;
+$marginal: 14px;
+
+/* BORDER */
+$border-thick: 3px;
+$border-thin: 1px;
+
+.game_container {
+  background-color: $black;
+}
+
+.choosen_p {
+  font-size: $h2;
+  color: $red;
+}
+
+.choosen_img_wrap {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.choosen_img {
+  width: 70%;
+}
+
+.pop--win {
+  width: 50vw;
+  height: 50vh;
+}

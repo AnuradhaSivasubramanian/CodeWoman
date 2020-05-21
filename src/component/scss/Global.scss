@@ -1,0 +1,28 @@
+/* COLORS */
+$red: #ec5c56;
+$lilac: #570071;
+$grey: #dddddd;
+$brown: #816452;
+
+/* FONT FAMILY */
+$font: "Roboto";
+
+/* FONT WEIGHTS */
+$light: 300;
+$medium: 500;
+
+/* FONT SIZE */
+$h1: 4rem;
+$h2: 2rem;
+$p: 1.3rem;
+$span: 1rem;
+$bodytext: 1.3rem;
+$marginal: 14px;
+
+/* BORDER */
+$border-thick: 4px;
+$border-thin: 1px;
+
+body {
+  font-family: $font !important;
+}

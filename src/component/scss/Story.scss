@@ -1,0 +1,16 @@
+.robot--img {
+  background-image: url(../images/evilRobot.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 35vh;
+  position: relative;
+  top: 5%;
+}
+
+.robot--speech {
+  font-size: 1.2rem;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 10%;
+  animation: fadeIn 3s linear infinite;
+}
