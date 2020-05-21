@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import "./scss/Global.scss";
 import "./scss/start.scss";
-import Background from "./images/Heroine2.svg";
 import Story from "./Story";
 
 class Start extends Component {
   state = {
-    mountStory: false
+    mountStory: false,
   };
 
   toggleStoryMount = () => {

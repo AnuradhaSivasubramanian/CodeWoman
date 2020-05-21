@@ -1,5 +1,5 @@
 import React from "react";
-import styleQuestions from "./images/styleQuestions.svg";
+
 import winPopUp from "./images/winPopUp.svg";
 import tryAgain from "./images/tryAgain.svg";
 
@@ -10,7 +10,7 @@ const RandomQuestion = ({
   myAllyUrl,
   ourHeroUrl,
   handleUnmount,
-  answered
+  answered,
 }) => {
   const selectedYes = () => {
     handleYes(question);
@@ -48,53 +48,49 @@ const RandomQuestion = ({
       </div>
       <section className="question">
         <div className="question--wrap container-fluid">
-          <div className="">
-            <div className="question--wrapper">
-              <img
-                className="question--heroine"
-                src={ourHeroUrl}
-                alt="Super Heroine"
-              />
+          <div className="question--wrapper">
+            <img
+              className="question--heroine"
+              src={ourHeroUrl}
+              alt="Super Heroine"
+            />
+          </div>
+
+          <div className="question--title wrapper">
+            <div className=" slide">
+              <p className="question--title_p">{question.Q}</p>
             </div>
 
-            <div className="question--title wrapper">
-              <div className=" slide">
-                <p className="question--title_p">{question.Q}</p>
-              </div>
-
-              <button
-                type="button"
-                className="question--btn btn btn-link"
-                onClick={selectedYes}
-              >
-                Yes
-              </button>
-              <button
-                type="button"
-                className="question--btn btn btn-link"
-                onClick={selectedNo}
-              >
-                No
-              </button>
-            </div>
-            <div className="allies-all">
-              <p className="allies--text">Your Allies!</p>
-              <div className="allies--wrapper">
-                {myAllyUrl
-                  ? myAllyUrl.map((item, index) => (
-                      <div className="allies-all wrapper">
-                        <div className="allies--wrapper slidehero ">
-                          <img
-                            className="question--allies"
-                            key={index}
-                            src={item}
-                            alt="my allies"
-                          />
-                        </div>
-                      </div>
-                    ))
-                  : null}
-              </div>
+            <button
+              type="button"
+              className="question--btn btn btn-link"
+              onClick={selectedYes}
+            >
+              Yes
+            </button>
+            <button
+              type="button"
+              className="question--btn btn btn-link"
+              onClick={selectedNo}
+            >
+              No
+            </button>
+          </div>
+          <div className="allies-all">
+            <p className="allies--text">Your Allies!</p>
+            <div className="allies--wrapper">
+              {myAllyUrl
+                ? myAllyUrl.map((item, index) => (
+                    <div className="slidehero ">
+                      <img
+                        className="question--allies"
+                        key={index}
+                        src={item}
+                        alt="my allies"
+                      />
+                    </div>
+                  ))
+                : null}
             </div>
           </div>
         </div>

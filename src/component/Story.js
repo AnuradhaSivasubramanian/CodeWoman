@@ -12,36 +12,36 @@ class Story extends Component {
     mountGame: false,
     ourHeroUrl: "",
     id_male: "",
-    mountChoseMale: false
+    mountChoseMale: false,
   };
   componentDidMount = () => {
-    this.state.id_list.map(element => {
+    this.state.id_list.map((element) => {
       return axios
         .get(`http://superheroapi.com/api.php/10158157868173814/${element}`)
-        .then(response => {
+        .then((response) => {
           let temp = response.data;
           this.setState({
             superHero: [...this.state.superHero, temp],
             selectedHero: temp.id,
-            ourHeroUrl: temp.image.url
+            ourHeroUrl: temp.image.url,
           });
         })
-        .catch(error => console.error(`something went wrong: ${error}`));
+        .catch((error) => console.error(`something went wrong: ${error}`));
     });
     return axios
       .get(`http://superheroapi.com/api.php/10158157868173814/498`)
-      .then(response => {
+      .then((response) => {
         this.setState({ id_male: response.data.image.url });
       })
-      .catch(error => console.error(`something went wrong: ${error}`));
+      .catch((error) => console.error(`something went wrong: ${error}`));
   };
-  selectHeroOnClick = chosenHero => {
+  selectHeroOnClick = (chosenHero) => {
     this.setState({ selectedHero: chosenHero.id });
     this.setState({
       id_list: this.state.id_list.filter(
-        item => item !== parseInt(chosenHero.id)
+        (item) => item !== parseInt(chosenHero.id)
       ),
-      ourHeroUrl: chosenHero.image.url
+      ourHeroUrl: chosenHero.image.url,
     });
     this.toggleMountGameMount();
   };
@@ -80,10 +80,9 @@ class Story extends Component {
             </div>
             <div className="wrapper ">
               <div className="start--typo slide_story">
-                <span>You will never have a job in tech!</span>
+                <span>You will never have a job in tech easily!</span>
               </div>
               <div className="circle--wrap">
-                <div className=""></div>
                 <button
                   type="button"
                   onClick={this.toggleMountSelectHero}

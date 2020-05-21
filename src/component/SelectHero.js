@@ -3,7 +3,6 @@ import HeroList from "./HeroList";
 import Game from "./Game";
 import ChooseMale from "./ChooseMale";
 import "./scss/SelectHero.scss";
-import Heroine from "./images/Heroine.svg";
 
 function SelectHero({
   superHero,
@@ -14,7 +13,7 @@ function SelectHero({
   ourHeroUrl,
   maleUrl,
   toggleMountChoseMale,
-  mountChoseMale
+  mountChoseMale,
 }) {
   return (
     <div>

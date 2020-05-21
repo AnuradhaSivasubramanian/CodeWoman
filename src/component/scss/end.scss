@@ -23,6 +23,13 @@ $border-thin: 1px;
   height: 100%;
 }
 
+@media screen and (min-width: 700px) {
+  .end-container {
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 80%;
+  }
+}
 .end-title {
   background-color: $grey;
   margin-bottom: 0;
