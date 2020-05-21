@@ -36,11 +36,13 @@ class Compare extends Component {
       Math.floor(Math.random() * this.props.enemyId.length)
     ];
     this.props.spliceEnemyId(enemyChar);
-    axios.get(`/${access_token}/${selectedHero}`).then((res) => {
-      this.setState({ myChar: res.data });
-    });
     axios
-      .get(`/${access_token}/${enemyChar}`)
+      .get(`https://superheroapi.com/api.php/10158157868173814/${selectedHero}`)
+      .then((res) => {
+        this.setState({ myChar: res.data });
+      });
+    axios
+      .get(`https://superheroapi.com/api.php/10158157868173814/${enemyChar}`)
       .then((res) => {
         this.setState({ enemy: res.data });
       })
