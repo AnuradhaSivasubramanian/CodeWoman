@@ -70,9 +70,8 @@ class Game extends Component {
       myAllies: [...this.state.myAllies, this.state.id_list[0]],
       id_list: this.state.id_list.splice(1, this.state.id_list.length),
     });
-    console.log("i am here");
     return axios
-      .get(`http://superheroapi.com/api.php/10158157868173814/${ally}`)
+      .get(`https://superheroapi.com/api.php/10158157868173814/${ally}`)
       .then((response) => {
         let temp = response.data.image.url;
         let temp2 = response.data.powerstats;

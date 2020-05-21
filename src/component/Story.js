@@ -17,7 +17,7 @@ class Story extends Component {
   componentDidMount = () => {
     this.state.id_list.map((element) => {
       return axios
-        .get(`http://superheroapi.com/api.php/10158157868173814/${element}`)
+        .get(`https://superheroapi.com/api.php/10158157868173814/${element}`)
         .then((response) => {
           let temp = response.data;
           this.setState({
@@ -29,7 +29,7 @@ class Story extends Component {
         .catch((error) => console.error(`something went wrong: ${error}`));
     });
     return axios
-      .get(`http://superheroapi.com/api.php/10158157868173814/498`)
+      .get(`https://superheroapi.com/api.php/10158157868173814/498`)
       .then((response) => {
         this.setState({ id_male: response.data.image.url });
       })
